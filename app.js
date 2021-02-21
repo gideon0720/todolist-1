@@ -36,6 +36,7 @@ app.get('/', function (req, res) {
       break;
 
     default:
+      console.log('Error: Number of day is invalid!');
       break;
   }
 
