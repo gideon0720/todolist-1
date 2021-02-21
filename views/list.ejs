@@ -10,13 +10,23 @@
 
 <body>
 
-  <% if (kindOfDay === 'Sunday'|| kindOfDay === 'Saturday') { %>
-  <h1 style="color: #29b90c">It's <%= kindOfDay %> To do list. </h1>
+  <h1><%= kindOfDay %></h1>
 
-  <% } else { %>
-  <h1 style="color: purple">It's <%= kindOfDay %> To do list. </h1>
+  <ul>   
+    
+    <% newItemArray.forEach(element => { %>
+      <li><%= element  %></li>     
+    <% }) %>
 
-  <% } %>
+  </ul>
+
+  <form class="" action="/" method="post">
+
+    <input type="text" name="newItem">
+
+    <button type="submit" name="button">Add to list</button>
+
+  </form>
 
 </body>
 
