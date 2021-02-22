@@ -5,9 +5,10 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-let items = ['Brew coffee', 'Hygen', 'Breakfast', 'Code'];
+let items = ['Give thanks', 'Hygen', 'Breakfast', 'Code'];
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static('public'));
 
 app.set('view engine', 'ejs');
 
