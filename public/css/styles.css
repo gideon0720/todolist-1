@@ -1,8 +1,9 @@
-html {
+body {
   background-color: #e4e9fd;
   background-image: -webkit-linear-gradient(65deg, #a683e3 50%, #e4e9fd 50%);
   min-height: 1000px;
   font-family: Arial, Helvetica, sans-serif;
+  position: relative;
 }
 
 h1 {
@@ -90,7 +91,9 @@ input[type='text']:focus {
 }
 
 footer {
-  color: white;
   color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  right: 50%;
   text-align: center;
 }

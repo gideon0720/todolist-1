@@ -1,39 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('header'); -%>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To do list</title>
-  <link rel="stylesheet" href="/css/styles.css">
-</head>
 
-<body>
+<div class="box" id="heading">
+  <h1><%= titleHead %></h1>
+</div>
 
-  <div class="box" id="heading">
-    <h1><%= kindOfDay %></h1>
-  </div>
-
-  <div class="box">
-    <% newItemArray.forEach(element => { %>
+<div class="box">
+  <% newItemArray.forEach(element => { %>
     <% if (element !== '') { %>
       <div class="item">
         <input type="checkbox">
         <p><%= element  %></p>
       </div>
-    <% } %>
-    <% }) %>
-
-    <form class="item" action="/" method="post">
-      <input type="text" name="newItem" placeholder="Ex.: Watch news" autocomplete="off">
-      <button type="submit" name="button">+</button>
-    </form>
-
-  </div>
-  
-
-
-</body>
-
-</html>
+      <% } %>
+      <% }) %>
+      
+      <form class="item" action="/" method="post">
+        <input type="text" name="newItem" placeholder="Ex.: Watch news" autocomplete="off">
+        <button type="submit" name="button" value=<%= titleHead %>>+</button>
+      </form>
+      
+    </div>
+    
+    
+    <%- include('footer'); -%> 
+    
+    
