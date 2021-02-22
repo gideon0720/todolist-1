@@ -15,14 +15,16 @@
   <ul>   
     
     <% newItemArray.forEach(element => { %>
-      <li><%= element  %></li>     
+      <% if (element !== '') { %>       
+        <li><%= element  %></li>     
+      <% } %>
     <% }) %>
 
   </ul>
 
   <form class="" action="/" method="post">
 
-    <input type="text" name="newItem">
+    <input type="text" name="newItem" placeholder="Ex.: Watch news">
 
     <button type="submit" name="button">Add to list</button>
 
